@@ -9,7 +9,7 @@ import { Model } from 'mongoose';
 export class UserService {
   constructor(@InjectModel(User.name) private readonly userModel:Model<User>) {}
 
-  create(createUserDto: CreateUserDto) {
+  create(createUserDto: CreateUserDto , payload) {
     return this.userModel.create(createUserDto);
   }
 
